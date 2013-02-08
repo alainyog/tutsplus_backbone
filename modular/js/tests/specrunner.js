@@ -1,6 +1,6 @@
 require.config({
   
-  baseUrl: "/modular/js/",
+  baseUrl: "../",
   urlArgs: 'cb=' + Math.random(),
   
   paths: {
