@@ -1,8 +1,8 @@
 require.config({
-  
-  baseUrl: "/modular/js/",
+
+  baseUrl: "../",
   urlArgs: 'cb=' + Math.random(),
-  
+
   paths: {
     jquery: 'libs/jquery.min',
     underscore: 'libs/underscore.min',
@@ -15,7 +15,7 @@ require.config({
     sinon: 'libs/sinon',
     spec_folder: 'tests/specs'
   },
-  
+
   shim: {
     underscore: {
       exports: "_"
@@ -43,7 +43,7 @@ require.config({
       exports: 'sinon'
     },
   }
-  
+
 });
 
 window.store = "TestStore"; // override local storage store name - for testing
@@ -68,8 +68,8 @@ require(['underscore', 'jquery', 'jasmine-html'], function(_, $, jasmine){
   specs.push('spec_folder/collections/restaurants_spec');
   specs.push('spec_folder/views/restaurants_list_spec');
   specs.push('tests/specs/views/restaurant_form_spec');
-  
-  
+
+
   $(function(){
     require(specs, function(){
       jasmineEnv.execute();
